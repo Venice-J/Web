@@ -11,7 +11,7 @@ div.timer{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #000;
     font-size: 20rem;
     z-index:2;
 }

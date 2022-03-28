@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="timer">
-        <p class="timerHour"></p><span>  :  </span><p class="timerMin"></p><span>  :  </span><p class="timerSec"></p>
+        <p class="timerHour">00</p><span>  :  </span><p class="timerMin">00</p><span>  :  </span><p class="timerSec">00</p>
     </div>
     <section class="countDown">
     </section>
@@ -28,7 +28,8 @@
                 <input type="number" name="min" id="min" min="00" max="59" step="1" value="0">
                 <label for="min">分鐘</label>
                 <input type="number" name="sec" id="sec" min="00" max="59" step="1" value="0">
-                <label for="sec">秒</label>        
+                <label for="sec">秒</label>   
+    
                 </form>
             </div>
             <div class="set size">
@@ -49,6 +50,7 @@
                     <!-- <button class="setting">設定</button> -->
             </div>
         </div>
+        <button class="submit">送出</button>
     </section>
 
 

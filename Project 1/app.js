@@ -43,20 +43,22 @@ document.querySelector('.endFullScreen').addEventListener('click',function(){
 })
 
 // 抓取設定倒數計時時間
-document.querySelector('.timerHour').innerHTML = document.querySelector('#hour').value;
-document.querySelector('#hour').addEventListener('input',(el)=>{
-    document.querySelector('.timerHour').innerHTML = el.target.value;
-})
+// document.querySelector('.timerHour').innerHTML = document.querySelector('#hour').value;
+// document.querySelector('#hour').addEventListener('input',(el)=>{
+//     document.querySelector('.timerHour').innerHTML = el.target.value;
+// })
 
-document.querySelector('.timerMin').innerHTML = document.querySelector('#min').value;
-document.querySelector('#min').addEventListener('input',(el)=>{
-    document.querySelector('.timerMin').innerHTML = el.target.value;
-})
+// document.querySelector('.timerMin').innerHTML = document.querySelector('#min').value;
+// document.querySelector('#min').addEventListener('input',(el)=>{
+//     document.querySelector('.timerMin').innerHTML = el.target.value;
+// })
 
-document.querySelector('.timerSec').innerHTML = document.querySelector('#sec').value;
-document.querySelector('#sec').addEventListener('input',(el)=>{
-    document.querySelector('.timerSec').innerHTML = el.target.value;
-})
+// document.querySelector('.timerSec').innerHTML = document.querySelector('#sec').value;
+// document.querySelector('#sec').addEventListener('input',(el)=>{
+//     document.querySelector('.timerSec').innerHTML = el.target.value;
+// })
+
+
 
 
 // 文字設定
@@ -79,3 +81,17 @@ document.querySelector('#textSize').onchange=function(){
 // document.querySelector('.opacity').onchange=function(){
 //     document.querySelector('.countDown').style.opacity=document.querySelector('.opacity').value
 // }
+
+// 倒數計時程式碼
+
+const s = 1000 , m = s*60 , h = m*60;
+
+// 每1000毫秒更新一次
+// serInterval(()=>{counting;},1000);
+
+// 按出送出
+document.querySelector('.submit').addEventListener('click',function(){
+    document.querySelector('.timerHour').innerHTML = document.querySelector('#hour').value.padStart(2,'0')
+    document.querySelector('.timerMin').innerHTML = document.querySelector('#min').value.padStart(2,'0')
+    document.querySelector('.timerSec').innerHTML = document.querySelector('#sec').value.padStart(2,'0')
+})
