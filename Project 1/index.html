@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="timer">
+        <p class="timerHour"></p><span>  :  </span><p class="timerMin"></p><span>  :  </span><p class="timerSec"></p>
+    </div>
+    <section class="countDown">
+    </section>
+    <i class="fullScreen"></i>
+    <i class="endFullScreen"></i>
+
+    <section class="backgroundSetting">
+
+        <h1>Setting</h1>
+
+        <div class="container">
+            <div class="set times">
+                <h2>時間</h2>
+                <input type="number" name="hour" id="hour" min="00" max="23" step="1" value="0">
+                <label for="hour">小時</label>
+                <input type="number" name="min" id="min" min="00" max="59" step="1" value="0">
+                <label for="min">分鐘</label>
+                <input type="number" name="sec" id="sec" min="00" max="59" step="1" value="0">
+                <label for="sec">秒</label>        
+                </form>
+            </div>
+            <div class="set size">
+                <h2>文字</h2>
+                <label for="textColor">顏色</label>
+                <input class="textColor"type="color" name="textColor" id="textColor"/>
+                <button class="textRange">隨機</button>
+                <label for="textSize">大小</label>
+                <input type="range" name="textSize" id="textSize" min='20' max='25' step='0.5' value='20'/>
+            </div>
+            <div class="set color">
+                <h2>背景顏色</h2>
+                    <label for="color">顏色</label>
+                    <input class="bgColor"type="color" name="color" id="color"/>
+                    <button class="bgRange">隨機</button>
+                    <label for="opacity">透明度</label>
+                    <input class='opacity' type="range" name="opacity" id="opacity" min="0" max="1" step="0.1" value="1"/>
+                    <!-- <button class="setting">設定</button> -->
+            </div>
+        </div>
+    </section>
+
+
+<script src="./app.js"></script>  
+</body>
+
+</html>

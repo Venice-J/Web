@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    border: 1px solid lightgray;
+    padding:1rem 2rem;
+    background-color: white;
+}
+li:hover{
+    background-color: lightsalmon;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
+li:hover>a{
+    color:white;
+}
+
+section.level01 >ul{
+    display: flex;
+}
+section.level02>ul{
+    display: none;
+    position: absolute;
+    top:55px;
+}
+
+ section.level01>ul>li:hover>section.level02>ul{
+    display: flex;
+}
+
+section.level03>ul{
+    display: none;
+    position: relative;
+    top:55px;
+}
+
+section.level02>ul>li:hover>section.level03>ul{
+    display: block;
+    position: absolute;
+}
+
+section.level04>ul{
+    display: none;
+    position:absolute;
+    top:7rem;
+    left:14.7rem;
+}
+
+section.level03>ul>li:hover>section.level04>ul{
+    display: flex;
+}
