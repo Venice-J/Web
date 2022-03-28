@@ -95,3 +95,5 @@ document.querySelector('.submit').addEventListener('click',function(){
     document.querySelector('.timerMin').innerHTML = document.querySelector('#min').value.padStart(2,'0')
     document.querySelector('.timerSec').innerHTML = document.querySelector('#sec').value.padStart(2,'0')
 })
+
+// 開始倒數
