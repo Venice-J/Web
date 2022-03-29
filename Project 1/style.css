@@ -46,11 +46,12 @@ i.endFullScreen{
     z-index:2;
 }
 .backgroundSetting{
+
     height: 30vh;
     display: flex;
     flex-direction: column;
-
     align-items:center;
+
 }
 div.container{
     display: flex;
