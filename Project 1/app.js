@@ -110,7 +110,7 @@ document.querySelector('.submit').addEventListener('click',function(){
 // 開始倒數
 setInterval(() => {
     counting();
-}, 500);
+}, 1000);
 
 })
 
