@@ -68,9 +68,7 @@ document.querySelector('#textSize').onchange=function(){
 
 
 // 倒數計時程式碼
-// const s = document.querySelector('.timerSec').innerHTML ,
-//     m = document.querySelector('.timerMin').innerHTML,
-//     h = document.querySelector('.timerSec').innerHTML
+
 
 function counting(){
     if ( document.querySelector('.timerSec').innerHTML != 0){
