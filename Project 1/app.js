@@ -69,8 +69,12 @@ document.querySelector('#textSize').onchange=function(){
 
 // 倒數計時程式碼
 
+const clock = setInterval(() => {
+    counting();
+}, 1000);
 
 function counting(){
+    
     if ( document.querySelector('.timerSec').innerHTML != 0){
         document.querySelector('.timerSec').innerHTML-- ;
     }else if( document.querySelector('.timerSec').innerHTML == 0 && document.querySelector('.timerMin').innerHTML != 0){
@@ -84,12 +88,13 @@ function counting(){
         document.querySelector('.timerHour').innerHTML = '00';
         document.querySelector('.timerMin').innerHTML = '00' ;
         document.querySelector('.timerSec').innerHTML = '00' ;
+        return clearInterval(clock);
     }
+    console.log('alert')
 
-
-    if(document.querySelector('.timerSec').innerHTML< 10  && document.querySelector('.timerSec').innerHTML != "00"){
-        document.querySelector('.timerSec').innerHTML = "0" + document.querySelector('.timerSec').innerHTML
-    }
+    // if(document.querySelector('.timerSec').innerHTML< 10  && document.querySelector('.timerSec').innerHTML != "00"){
+    //     document.querySelector('.timerSec').innerHTML = "0" + document.querySelector('.timerSec').innerHTML
+    // }
 
     // if(document.querySelector('.timerMin').innerHTML< 10  && document.querySelector('.timerMin').innerHTML != "00"){
     //     document.querySelector('.timerMin').innerHTML = "0" + document.querySelector('.timerMin').innerHTML
@@ -108,9 +113,11 @@ document.querySelector('.submit').addEventListener('click',function(){
     document.querySelector('.timerSec').innerHTML = document.querySelector('#sec').value.padStart(2,'0')
 
 // 開始倒數
-setInterval(() => {
-    counting();
-}, 1000);
+   
+    setInterval(() => {
+        counting();
+    }, 1000);
+    
 
 })
 
